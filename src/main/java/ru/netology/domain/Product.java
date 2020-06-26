@@ -30,5 +30,9 @@ public class Product {
         return price;
     }
 
+    public boolean matches(String search) {
+        return name.equalsIgnoreCase(search);
+    }
+
 
 }

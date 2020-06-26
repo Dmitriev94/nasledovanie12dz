@@ -4,6 +4,8 @@ package ru.netology.domain;
 public class Smartphone extends Product {
     private String manufactured;
 
+
+
     public Smartphone() {
     }
 
@@ -14,6 +16,12 @@ public class Smartphone extends Product {
 
     public String getManufactured() {
         return manufactured;
+    }
+
+
+    @Override
+    public boolean matches(String search) {
+        return super.matches(search) || manufactured.equalsIgnoreCase(search);
     }
 
 
