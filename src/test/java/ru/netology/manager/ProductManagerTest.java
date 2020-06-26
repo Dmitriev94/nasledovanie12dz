@@ -31,7 +31,7 @@ class ProductManagerTest {
     @Test
     void shouldFindByNameSmartphone() {
         String smartphoneName = "testPhoneName1";
-        Product[] returned = new Product[]{smartphoneOne,smartphoneTwo, smartphoneThree};
+        Product[] returned = new Product[]{smartphoneOne, smartphoneTwo, smartphoneThree};
         doReturn(returned).when(repository).findAll();
         Product[] expected = new Product[]{smartphoneOne};
         Product[] actual = manager.searchBy(smartphoneName);
@@ -41,7 +41,7 @@ class ProductManagerTest {
     @Test
     void shouldFindByNameBook() {
         String bookName = "testBookName1";
-        Product[] returned = new Product[]{bookOne,bookTwo,bookThree};
+        Product[] returned = new Product[]{bookOne, bookTwo, bookThree};
         doReturn(returned).when(repository).findAll();
         Product[] expected = new Product[]{bookOne};
         Product[] actual = manager.searchBy(bookName);
@@ -52,7 +52,7 @@ class ProductManagerTest {
     @Test
     void shouldFindByAuthor() {
         String author = "testAuthor2";
-        Product[] returned = new Product[]{bookOne,bookTwo,bookThree};
+        Product[] returned = new Product[]{bookOne, bookTwo, bookThree};
         doReturn(returned).when(repository).findAll();
         Product[] expected = new Product[]{bookTwo};
         Product[] actual = manager.searchBy(author);
@@ -62,7 +62,7 @@ class ProductManagerTest {
     @Test
     void shouldFindByManufactured() {
         String manufactured = "testManufacturer3";
-        Product[] returned = new Product[]{smartphoneOne,smartphoneTwo, smartphoneThree};
+        Product[] returned = new Product[]{smartphoneOne, smartphoneTwo, smartphoneThree};
         doReturn(returned).when(repository).findAll();
         Product[] expected = new Product[]{smartphoneThree};
         Product[] actual = manager.searchBy(manufactured);
@@ -73,7 +73,7 @@ class ProductManagerTest {
     @Test
     void shouldBookNameNotFound() {
         String bookName = "testBookNameX";
-        Product[] returned = new Product[]{bookOne,bookTwo,bookThree};
+        Product[] returned = new Product[]{bookOne, bookTwo, bookThree};
         doReturn(returned).when(repository).findAll();
         Product[] expected = new Product[]{};
         Product[] actual = manager.searchBy(bookName);
@@ -83,7 +83,7 @@ class ProductManagerTest {
     @Test
     void shouldBookAuthorNotFound() {
         String author = "testAuthorX";
-        Product[] returned = new Product[]{bookOne,bookTwo,bookThree};
+        Product[] returned = new Product[]{bookOne, bookTwo, bookThree};
         doReturn(returned).when(repository).findAll();
         Product[] expected = new Product[]{};
         Product[] actual = manager.searchBy(author);
@@ -93,16 +93,17 @@ class ProductManagerTest {
     @Test
     void shouldSmartphoneNameNotFound() {
         String smartphoneName = "testPhoneNameX";
-        Product[] returned = new Product[]{smartphoneOne,smartphoneTwo, smartphoneThree};
+        Product[] returned = new Product[]{smartphoneOne, smartphoneTwo, smartphoneThree};
         doReturn(returned).when(repository).findAll();
         Product[] expected = new Product[]{};
         Product[] actual = manager.searchBy(smartphoneName);
         assertArrayEquals(expected, actual);
     }
+
     @Test
     void shouldSmartphoneManufacturerNotFound() {
         String smartphoneManufacturer = "testManufacturerX";
-        Product[] returned = new Product[]{smartphoneOne,smartphoneTwo, smartphoneThree};
+        Product[] returned = new Product[]{smartphoneOne, smartphoneTwo, smartphoneThree};
         doReturn(returned).when(repository).findAll();
         Product[] expected = new Product[]{};
         Product[] actual = manager.searchBy(smartphoneManufacturer);
