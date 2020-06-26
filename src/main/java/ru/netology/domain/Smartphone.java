@@ -5,7 +5,6 @@ public class Smartphone extends Product {
     private String manufactured;
 
 
-
     public Smartphone() {
     }
 
