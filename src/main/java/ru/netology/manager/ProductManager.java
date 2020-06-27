@@ -18,7 +18,7 @@ public class ProductManager {
         Product[] products = repository.findAll();
         Product[] result = new Product[products.length];
         for (int i = 0; i < result.length; i++) {
-            int index = products.length - i - 1;
+            int index = products.length;
             result[i] = products[index];
         }
         return result;
